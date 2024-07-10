@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    
+</head>
+<body>
+<div class="background-image">
+    <h2>CREATIVE<br>STORIE'S</h2>
+    <p class="h2Text">Welcome to our blog platform, where you can effortlessly create, manage, and explore engaging blog posts. 
+        Enjoy a seamless experience as you post new content, delete outdated entries, and browse through your collection of insightful articles.</p>
+   
+    <!-- <a class="postingA" href="/create">Create a new post</a> -->
+    <ul>
+        <% posts.forEach(post => { %>
+            <li>
+                <a class="postingA" href="/post/<%= post.id %>"><%= post.title %></a>
+                <form  class="formAfter" action="/delete/<%= post.id %>" method="post" style="display: inline;">
+                <button class="btnDelete" type="submit">Delete</button>
+            </form>
+        </li>
+      <%  }) %>
+    </ul>
+</div>
+
+<div class="background-image-2">
+    
+</div>
+
+<div class="overcontent">
+    <a class="logo" href="">qc</a>
+    <a class="contact" href="/contact">[Contact]</a>
+    <a class="about" href="/about">[About]</a>
+</div>
+
+<div class="info">
+    <h3 class="h3Date">Date</h3>
+    <p class="pInfo">Jun. 2024</p>
+    
+    <h3 class="h3Date">Roles</h3>
+    <p class="pInfo">Design/Development</p>
+    
+    <h3 class="h3Date">Tech</h3>
+    <p class="pInfo">HTML, CSS, JS</p>
+</div>
+
+<div class="createArtCon">
+    <a class="create" href="/create">[Create a new post]</a>
+    <a class="contact2" href="/contact">[Contact]</a>
+    <a class="about2" href="/about">[About]</a>
+
+</div>
+</body>
+</html>
